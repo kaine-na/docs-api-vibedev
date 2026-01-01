@@ -1,12 +1,16 @@
-# VibeDev API
+# VibeDevID API
 
 OpenAI & Anthropic compatible REST API proxy.
 
 **Base URL:** `https://api.vibe-dev.web.id`
 
+**Base Script From:** `https://github.com/router-for-me/CLIProxyAPIPlus`
+
 ---
 
 ## Quick Start
+
+Provider Support: **OpenAI** & **Antrophic**
 
 ```bash
 curl https://api.vibe-dev.web.id/v1/chat/completions \
@@ -81,6 +85,24 @@ Anthropic-compatible messages API.
 
 ---
 
+## Quick Add For Droid
+
+Location: `C:\Users\<YOU USERNAME>\.factory\config.json`
+
+```json
+{
+    "custom_models": [
+        {
+            "model_display_name": "Claude Opus 4.5 Thinking [VibeDev-ID]",
+            "model": "claude-opus-4-5-thinking",
+            "base_url": "https://api.vibe-dev.web.id",
+            "api_key": "YOU_API_KEY",
+            "provider": "anthropic"
+        }
+    ]
+}
+```
+
 ## SDK Examples
 
 ### Python (OpenAI)
@@ -118,7 +140,7 @@ message = client.messages.create(
 print(message.content[0].text)
 ```
 
-### JavaScript
+### JavaScript (OpenAI)
 
 ```javascript
 import OpenAI from 'openai';
@@ -150,4 +172,5 @@ console.log(response.choices[0].message.content);
 
 ## Get API Key
 
-Join our Discord server to claim your API key using `/claim` command.
+Join our Discord server to claim your API key.
+[VibeDev ID](https://discord.gg/pgPp3zcWaf)
